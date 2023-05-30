@@ -5,7 +5,7 @@ orbs:
 
 jobs:
   build:
-    executor: newman/postman-newman-docker
+    executor: node/default
     steps:
       - checkout
       - newman/newman-run:
