@@ -1,0 +1,859 @@
+{
+	"info": {
+		"_postman_id": "076b59a3-d338-41b2-8fe5-79cf6663f9d1",
+		"name": "EdWings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20050394"
+	},
+	"item": [
+		{
+			"name": "interview",
+			"item": [
+				{
+					"name": "findallbyuser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{interviews}}/findallbyuser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"findallbyuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findallbyschool/:idschool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{interviews}}/findallbyschool/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"findallbyschool",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findallbyschool/rd/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{interviews}}/findallbyschool/rd/1\n",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"findallbyschool",
+								"rd",
+								"1\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findallbyuser/rd/:iduser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{interviews}}/findallbyuser/rd/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"findallbyuser",
+								"rd",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit/:idinterview",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classNumber\":4,\r\n    \"termsNumber\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{interviews}}/edit/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adduser/:idinterview",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUserList\":[1,24,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{interviews}}/adduser/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"adduser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeuser/:idinterview",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUserList\":[17]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{interviews}}/removeuser/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"removeuser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"classNumber\": 3,\r\n  \"termsNumber\": 112,\r\n  \"schoolId\": 1,\r\n  \"users\": [1, 2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{interviews}}/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{interviews}}",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Fiszki",
+			"item": [
+				{
+					"name": "findall/:idInterview/:idEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{fiszka}}/findall/1/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{fiszka}}",
+								"findall",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editfiszka",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"zmienioneImie\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{fiszka}}/editfiszka/1/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{fiszka}}",
+								"editfiszka",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addgroup/:idgroup",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUser\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{fiszka}}/addgroup/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{fiszka}}",
+								"addgroup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "school",
+			"item": [
+				{
+					"name": "findall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{school}}/findall",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{school}}",
+								"findall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findbyid/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{school}}/findbyid/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{school}}",
+								"findbyid",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findall/mgtm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{school}}/findall/mgtmt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{school}}",
+								"findall",
+								"mgtmt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findbyid/mgtmt/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{school}}/findbyid/mgtmt/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{school}}",
+								"findbyid",
+								"mgtmt",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"province\":\"Małopolskaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{school}}/edit/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{school}}",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"id\": \"10\",\r\n            \"name\": \"Szkola Podstawowan r11 w Gdyni\",\r\n            \"city\": \"Gdynia\",\r\n            \"street\": \"Szkołowa\",\r\n            \"status\": \"PA\",\r\n            \"type\": \"O\",\r\n            \"email\": \"szkoła4@szkoła.pl\",\r\n            \"phone\": \"123456789\",\r\n            \"province\": \"Pomorskie\",\r\n            \"cooperation\": true,\r\n            \"suiteNumber\": \"1\",\r\n            \"postCode\": \"81-000\",\r\n            \"numberOfClasses\": 1,\r\n            \"comments\": \"komentarz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{school}}/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{school}}",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "director",
+			"item": [
+				{
+					"name": "getdirector//mgtmt:idSchool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{director}}/getdirector/mgtmt/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{director}}",
+								"getdirector",
+								"mgtmt",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdirector/rd/:idSchool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{director}}/getdirector/rd/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{director}}",
+								"getdirector",
+								"rd",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create/:idSchool",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"jarek\",\r\n    \"surname\":\"kaczka\",\r\n    \"phone\":\"123432132\",\r\n    \"email\":\"pis@poczta.pl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{director}}/create/a479ef69-a85f-4bab-8cc5-3b594790e64f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{director}}",
+								"create",
+								"a479ef69-a85f-4bab-8cc5-3b594790e64f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit/:idSchool",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Filip\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{director}}/edit/a479ef69-a85f-4bab-8cc5-3b594790e64f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{director}}",
+								"edit",
+								"a479ef69-a85f-4bab-8cc5-3b594790e64f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactPerson",
+			"item": [
+				{
+					"name": "get/mgtmt/:idSchool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{contactPerson}}/get/mgtmt/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{contactPerson}}",
+								"get",
+								"mgtmt",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get/rd/:idSchool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{contactPerson}}/get/rd/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{contactPerson}}",
+								"get",
+								"rd",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create/:idSchool",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"wojtek\",\r\n    \"surname\":\"zaraska\",\r\n    \"email\":\"wojo@poczta.pl\",\r\n    \"phone\":\"981384283\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{contactPerson}}/create/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{contactPerson}}",
+								"create",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit/:schoolId/:idContactPerson",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"BASIA2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{contactPerson}}/edit/1/54d9ed1f-3cff-444d-806e-c4f9ecc0e1d5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{contactPerson}}",
+								"edit",
+								"1",
+								"54d9ed1f-3cff-444d-806e-c4f9ecc0e1d5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rentalCost",
+			"item": [
+				{
+					"name": "get/mgtmt/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{rentalCost}}/get/mgtmt/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{rentalCost}}",
+								"get",
+								"mgtmt",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logowanie MGTM",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code === 200){\r",
+							"    pm.environment.set('token',pm.response.json().access_token)\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"luki@email.pl\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logowanie RD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code === 200){\r",
+							"    pm.environment.set('token',pm.response.json().access_token)\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"marek@email.pl\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logowanie USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code === 200){\r",
+							"    pm.environment.set('token',pm.response.json().access_token)\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tomek@email.pl\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "interviews",
+			"value": "interviews",
+			"type": "string"
+		},
+		{
+			"key": "fiszka",
+			"value": "fiszka",
+			"type": "string"
+		},
+		{
+			"key": "school",
+			"value": "school",
+			"type": "string"
+		},
+		{
+			"key": "director",
+			"value": "director",
+			"type": "string"
+		},
+		{
+			"key": "contactPerson",
+			"value": "contactperson",
+			"type": "string"
+		},
+		{
+			"key": "rentalCost",
+			"value": "rentalcost",
+			"type": "string"
+		}
+	]
+}
