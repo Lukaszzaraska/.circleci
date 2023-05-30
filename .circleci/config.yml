@@ -9,5 +9,6 @@ jobs:
       - newman/newman-run:
           collection:  ./EdWings.postman_collection.json
           environment:  ./EdWingsEnvironment.postman_environment.json
- 
+ timeout: '1000'
+workflows: null
 
