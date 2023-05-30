@@ -1,4 +1,4 @@
-version:  '2.1'
+version: '2.1'
 orbs:
   newman: postman/newman@1.0.0
 jobs:
@@ -10,5 +10,5 @@ jobs:
           collection:  ./EdWings.postman_collection.json
           environment:  ./EdWingsEnvironment.postman_environment.json
           timeout: '1000'
- workflows: null
+workflows: null
 
