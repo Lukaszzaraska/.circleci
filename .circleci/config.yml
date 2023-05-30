@@ -7,7 +7,7 @@ jobs:
   build:
     executor: node/default
     steps:
-      - checkout
+      - checkout 
       - newman/newman-run:
           collection: ./EdWings.postman_collection.json
           environment: ./EdWingsEnvironment.postman_environment.json
